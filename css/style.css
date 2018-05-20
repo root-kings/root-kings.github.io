@@ -1,0 +1,48 @@
+body {
+    font-family: "Raleway" !important;
+}
+
+.brand-logo img {
+    max-height: 54px;
+}
+
+.hidden {
+    display: none;
+}
+
+.screen-unit {
+    width: 100vw;
+    height: 100vh;
+}
+
+.screen-height {
+    height: 100vh;
+}
+
+.screen-width {
+    width: 100vh;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.padded {
+    padding: 10px;
+}
+
+.strong {
+    font-weight: 600;
+}
+
+.rounded {
+    border-radius: 8px;
+}
+
+.no-overflow {
+    overflow: hidden;
+}
