@@ -4,4 +4,4 @@
 
 ---
 
-&copy 2018 Dayshmookh Apps Limited
+© 2018 Dayshmookh Apps Limited
