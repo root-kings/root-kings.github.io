@@ -1,0 +1,206 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body flex adjustment for  sticky footer */
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Adjustment for logo */
+
+@media only screen and (min-width: 992px) {
+  .brand-logo {
+    margin-left: 15px !important;
+  }
+}
+
+nav .brand-logo img {
+  max-height: 56px;
+}
+
+/* Blocks */
+
+.screen-unit {
+  width: 100vw;
+  height: 100vh;
+}
+
+.screen-height {
+  height: 100vh;
+}
+
+.screen-width {
+  width: 100vh;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+/* Font */
+
+.strong {
+  font-weight: 600;
+}
+
+span.tiny {
+  font-size: 0.7em;
+}
+
+/* Decorations */
+
+.rounded {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.curvy {
+  border-radius: 64px;
+  overflow: hidden;
+}
+
+.no-overflow {
+  overflow: hidden;
+}
+
+.sharp {
+  border-radius: 0px;
+}
+
+/* Display and Positioning */
+
+.hidden {
+  display: none;
+}
+
+.fixed {
+  position: fixed;
+}
+
+/* Padding */
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.padded-compact {
+  padding: 20px !important;
+}
+
+.padded-comfortable {
+  padding: 45px !important;
+}
+
+.padded-cozy {
+  padding: 70px !important;
+}
+
+.padded-top-compact {
+  padding-top: 20px !important;
+}
+
+.padded-top-comfortable {
+  padding-top: 45px !important;
+}
+
+.padded-top-cozy {
+  padding-top: 70px !important;
+}
+
+.padded-bottom-compact {
+  padding-bottom: 20px !important;
+}
+
+.padded-bottom-comfortable {
+  padding-bottom: 45px !important;
+}
+
+.padded-bottom-cozy {
+  padding-bottom: 70px !important;
+}
+
+.padded-left-cozy {
+  padding-left: 70px !important;
+}
+
+.padded-right-cozy {
+  padding-right: 70px !important;
+}
+
+/* Margin */
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.margined-compact {
+  margin: 20px !important;
+}
+
+.margined-comfortable {
+  margin: 45px !important;
+}
+
+.margined-cozy {
+  margin: 70px !important;
+}
+
+.margined-top-compact {
+  margin-top: 20px !important;
+}
+
+.margined-top-comfortable {
+  margin-top: 45px !important;
+}
+
+.margined-top-cozy {
+  margin-top: 70px !important;
+}
+
+.margined-bottom-compact {
+  margin-bottom: 20px !important;
+}
+
+.margined-bottom-comfortable {
+  margin-bottom: 45px !important;
+}
+
+.margined-bottom-cozy {
+  margin-bottom: 70px !important;
+}
+
+/* Image Modifiers */
+
+img.dark {
+  filter: brightness(60%) saturate(150%);
+}
+
+/* simple transitions */
+
+.zoomer {
+  transition: transform 0.25s ease-in-out;
+}
+
+.zoomer:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.fader {
+  filter: brightness(60%);
+}
+
+.fader:hover {
+  filter: brightness(90%);
+}

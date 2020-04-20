@@ -1,0 +1,106 @@
+.btn-bordered {
+  box-sizing: content-box;
+  border: 1px solid #aaaaaa90;
+}
+
+a.breadcrumb::before {
+  color: currentColor;
+}
+
+body {
+  /* color: #ffffff; */
+  /* background: #1b1b12; */
+  font-family: "Montserrat";
+}
+/* -- root kings colors -- */
+.root-light {
+  background: #ffd58b;
+}
+.root-yellow {
+  background: #ffbd4a;
+}
+.root-orange {
+  background: #af572d;
+}
+.root-dark {
+	background: #1b1b12;
+}
+
+
+.root-light-text {
+  color: #ffd58b;
+}
+.root-yellow-text {
+  color: #ffbd4a;
+}
+.root-orange-text {
+  color: #af572d;
+}
+.root-dark-text {
+  color: #1b1b12;
+}
+
+/* -- -- -- */
+
+/* -- responsive -- */
+/* small */
+#welcome h1 {
+  /* font-size: 48pt; */
+  font-weight: 600;
+}
+
+#welcome .col {
+  /* height: 512px; */
+}
+
+#welcome img {
+  height: 300px;
+}
+
+/* medium */
+@media only screen and (min-width: 601px) {
+  #welcome h1 {
+    font-size: 72pt;
+    font-weight: 600;
+  }
+
+  #welcome .col {
+    height: 512px;
+  }
+
+  #welcome img {
+    height: 512px;
+  }
+}
+
+/* large */
+@media only screen and (min-width: 992px) {
+  #welcome h1 {
+    font-size: 144pt;
+    font-weight: 600;
+  }
+
+  #welcome .col {
+    height: 768px;
+  }
+
+  #welcome img {
+    height: 768px;
+  }
+}
+
+/* -- -- -- */
+
+#welcome h1 {
+	margin-left: -0.09em;
+}
+
+#welcome .links {
+	font-size: 1.5em;
+	line-height: 36px;
+}
+
+#welcome .links a {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 300;
+}
