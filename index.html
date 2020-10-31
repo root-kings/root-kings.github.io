@@ -11,10 +11,14 @@
 
     <link rel="stylesheet" href="/css/lib/materialize.min.css" />
     <link rel="stylesheet" href="/css/lib/dayshmookh.layout.css" />
-		<link rel="stylesheet" href="/css/lib/MaterialIcons.css" />
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/lib/MaterialIcons.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/css/lib/dayshmookh.gradients.css" />
     <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   </head>
   <body>
     <!-- <header>
@@ -40,8 +44,8 @@
       </ul>
     </header> -->
     <main>
-      <section id="welcome" class="valign-wrapper ">
-        <div class="full-width ">
+      <section id="welcome" class="valign-wrapper">
+        <div class="full-width">
           <div class="row root-dark">
             <div class="col s12 m5 root-orange">
               <div class="center">
@@ -54,13 +58,13 @@
                 <!-- <h4 class="light">
                 Welcome to
               </h4> -->
-                <h1 class="light hide-on-small-only white-text">Root<br />Kings</h1>
+                <h1 class="light hide-on-small-only white-text">
+                  Root<br />Kings
+                </h1>
                 <h1 class="light hide-on-med-and-up white-text">Root Kings</h1>
-                <h3 class="light  white-text">
-                  Building the future
-                </h3>
+                <h3 class="light white-text">Building the future</h3>
 
-                <p class="light links  white-text">
+                <p class="light links white-text">
                   <a class="root-light-text" href="#about">about</a> |
                   <!-- <a class="root-light-text" href="#portfolio">portfolio</a> | -->
                   <!-- <a class="root-light-text" href="#team">team</a> | -->
@@ -76,12 +80,12 @@
         <div class="container">
           <div class="row">
             <div class="col s12 padded-cozy">
-              <h1 class="light">
-                about us
-              </h1>
+              <h1 class="light">about us</h1>
             </div>
 
-            <div class="col s12 m7 padded-bottom-cozy padded-left-cozy padded-right-cozy">
+            <div
+              class="col s12 m7 padded-bottom-cozy padded-left-cozy padded-right-cozy"
+            >
               <p class="light flow-text">
                 Starting out as a team for summer projects, we banded together
                 as partners in a startup to make technology fun and accessible
@@ -92,41 +96,81 @@
                 science, internet of things, cloud computing and advancements in
                 software trying to build a better future for all humanity.
               </p>
-						</div>
+            </div>
 
-						<div class="col s12 m5 padded-left-cozy padded-right-cozy">
-							<img src="/images/section-bg/about.svg" alt="" class="section-bg">
-						</div>
+            <div class="col s12 m5 padded-left-cozy padded-right-cozy">
+              <img
+                src="/images/section-bg/about.svg"
+                alt=""
+                class="section-bg"
+              />
+            </div>
           </div>
         </div>
       </section>
-      
+
+      <section id="about" class="root-light">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 padded-cozy">
+              <h1 class="light">Our Projects</h1>
+            </div>
+
+            <div
+              class="col s12 padded-bottom-cozy padded-left-cozy padded-right-cozy"
+            >
+              <div id="app" class="row">
+                <div v-for="project in projects" class="col s12 m6 l4">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="/images/office.jpg" alt="" />
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title">{{ project.title }}</span>
+                      <p>{{ project.text }}</p>
+                    </div>
+                    <div class="card-action">
+                      <a href="#!" class="btn btn-flat root-orange-text">
+                        <i class="material-icons left">web</i> Homepage
+                      </a>
+                      <a href="#!" class="btn btn-flat root-orange-text">
+                        <i class="material-icons left">code</i> GitHub
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" class="root-dark">
         <div class="container">
           <div class="row">
             <div class="col s12 padded-cozy">
-              <h1 class="light white-text">
-                contact us
-              </h1>
+              <h1 class="light white-text">contact us</h1>
             </div>
 
-            <div class="col s12 m7 padded-bottom-cozy padded-left-cozy padded-right-cozy">
+            <div
+              class="col s12 m7 padded-bottom-cozy padded-left-cozy padded-right-cozy"
+            >
               <p class="light flow-text">
                 <a href="mailto:contact@rootkings.dev">contact@rootkings.dev</a>
               </p>
               <p class="light flow-text">
                 <a href="tel:+917020441930">+91 7020 441 930</a>
               </p>
-						</div>
+            </div>
 
-						<!--<div class="col s12 m5 padded-left-cozy padded-right-cozy">
+            <!-- <div class="col s12 m5 padded-left-cozy padded-right-cozy">
 							<img src="/images/section-bg/contact.svg" alt="" class="section-bg">
-						</div>-->
+						</div> -->
           </div>
         </div>
-			</section>
+      </section>
 
-			<!-- <section id="portfolio" class="root-dark">
+      <!-- <section id="portfolio" class="root-dark">
         <div class="container">
           <div class="row">
             <div class="col s12 padded-cozy">
@@ -284,15 +328,38 @@
       </section> -->
     </main>
 
-    <!-- <footer class="page-footer blue-grey darken-2">
+    <footer class="page-footer blue-grey darken-2">
       <div class="footer-copyright">
         <div class="container center">
           Created by <a href="https://root-kings.github.io">Root Kings</a>.
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <script src="/js/lib/materialize.min.js"></script>
     <script src="/js/init.js"></script>
   </body>
 </html>
+
+<script>
+  var app4 = new Vue({
+    el: "#app",
+    data: {
+      projects: [
+        {
+          title: "Humbleshit",
+          text: "App for facility management",
+        },
+
+        { title: "STOQ", text: "Trading automated strategies" },
+        { title: "Naai", text: "Online Service Booking App" },
+        { title: "Quanrum" , text: "TradeBot"},
+        { title: "Clavi", text: "Academic Assistant"},
+        { title: "Flora", text: "Farm Assistant App" },
+        { title: "Liberty", text: "Library Booking System"},
+        { title: "GHRCE Feedback" ,text: "Feedback Collection System"},
+        { title: "Crunch", text: "Canteen Manager" },
+      ],
+    },
+  });
+</script>
