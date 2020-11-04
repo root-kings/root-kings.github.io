@@ -124,8 +124,8 @@
               class="col s12 padded-bottom-cozy padded-left-cozy padded-right-cozy"
             >
               <div id="app" class="row">
-                <div v-for="project in projects" class="col s12 m6 l4">
-                  <div class="card">
+                <div v-for="project in projects" class="col s12 m6 l4" >
+                  <div class="card" >
                     <div class="card-image">
                       <img src="/images/office.jpg" alt="" />
                     </div>
@@ -134,16 +134,35 @@
                       <p>{{ project.text }}</p>
                     </div>
                     <div class="card-action">
-                      <a href="#!" class="btn btn-flat root-orange-text">
+                      <!-- <a href="#!" class="btn btn-flat root-orange-text">
                         <i class="material-icons left">web</i> Homepage
-                      </a>
+                      </a> -->
                       <a href="#!" class="btn btn-flat root-orange-text">
                         <i class="material-icons left">code</i> GitHub
                       </a>
+
+                      <a  class=" modal-trigger btn btn-flat root-orange-text" href="#modal1">Learn More...</a> 
+                      
+
                     </div>
                   </div>
                 </div>
+
               </div>
+
+             
+  <!-- Modal Structure -->
+  <div id="modal1"  class="modal" >
+   
+     <div v-for="modal in  modals "class="modal-content" >
+      <h4>{{ modal.title }}</h4>
+      <p>{{ modal.text }}</p>
+     </div>
+     <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+     </div>
+  
+  </div>
             </div>
           </div>
         </div>
@@ -194,9 +213,9 @@
               <p class="light flow-text">
                 <a href="mailto:contact@rootkings.dev">contact@rootkings.dev</a>
               </p>
-              <p class="light flow-text">
+              <!-- <p class="light flow-text">
                 <a href="tel:+917020441930">+91 7020 441 930</a>
-              </p>
+              </p> -->
             </div>
 
             <!-- <div class="col s12 m5 padded-left-cozy padded-right-cozy">
@@ -385,6 +404,7 @@
         {
           title: "Humbleshit",
           text: "App for facility management",
+          
         },
 
         { title: "STOQ", text: "Trading automated strategies" },
@@ -396,8 +416,29 @@
         { title: "GHRCE Feedback" ,text: "Feedback Collection System"},
         { title: "Crunch", text: "Canteen Manager" },
       ],
-     
-      
     },
   });
+   
+  //  var app4 = new Vue({
+  //    el: "#modal1",
+  //    data: {
+  //      modals: [
+  //        {
+  //            title: "Humbleshit",
+  //            text: "App for facility management"
+  //        },
+  //        { title: "STOQ", text: "Trading automated strategies" },
+  //        { title: "Naai", text: "Online Service Booking App" },
+  //       { title: "Quanrum" , text: "TradeBot"},
+  //       { title: "Clavi", text: "Academic Assistant"},
+  //       { title: "Flora", text: "Farm Assistant App" },
+  //       { title: "Liberty", text: "Library Booking System"},
+  //       { title: "GHRCE Feedback" ,text: "Feedback Collection System"},
+  //       { title: "Crunch", text: "Canteen Manager" },
+  //      ]
+  //    }
+  //  })
+
+  
+       
 </script>
