@@ -10,11 +10,11 @@ a.breadcrumb::before {
 body {
   /* color: #ffffff; */
   /* background: #1b1b12; */
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
 }
 /* -- root kings colors -- */
 .root-light {
-  background: #ffd58b;
+  background: #ffffff;
 }
 .root-yellow {
   background: #ffbd4a;
@@ -22,10 +22,12 @@ body {
 .root-orange {
   background: #af572d;
 }
-.root-dark {
-	background: #1b1b12;
+.root-green {
+  background: #4e9974;
 }
-
+.root-dark {
+  background: #386641;
+}
 
 .root-light-text {
   color: #ffd58b;
@@ -34,6 +36,9 @@ body {
   color: #ffbd4a;
 }
 .root-orange-text {
+  color: #af572d;
+}
+.root-green-text {
   color: #af572d;
 }
 .root-dark-text {
@@ -47,10 +52,6 @@ body {
 #welcome h1 {
   /* font-size: 48pt; */
   font-weight: 600;
-}
-
-#welcome .col {
-  /* height: 512px; */
 }
 
 #welcome img {
@@ -92,15 +93,32 @@ body {
 /* -- -- -- */
 
 #welcome h1 {
-	margin-left: -0.09em;
+  margin-left: -0.09em;
 }
 
-#welcome .links {
-	font-size: 1.5em;
-	line-height: 36px;
-}
-
-#welcome .links a {
-  font-family: "Courier New", Courier, monospace;
+a {
+  font-family: 'Courier New', Courier, monospace;
   font-weight: 300;
+}
+
+.text-monospace {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 300;
+}
+
+.shadow-text {
+  text-shadow: 0 1px 4px #131313;
+}
+
+.underlined {
+  border-bottom: 3px solid #386641;
+}
+
+.underlined.dark {
+  border-bottom: 3px solid #ffffff;
+}
+
+.contact-link {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
 }
