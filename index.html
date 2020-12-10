@@ -159,22 +159,31 @@
             <div
               class="col s12 padded-bottom-cozy padded-left-cozy padded-right-cozy"
             >
-            <!-- <div id="app"  class="collection">
-              <a href="#!" v-for="team in teams" class="collection-item">{{ team.text }}</a>
-              
-            </div> -->
-
-            <p>Krushn Dayshmookh</p>
-            <p>Vithika Jha</p>
-            <p>Sharvari Dhomne</p>
-            <p>Shivangi Shukla</p>
-            <p>Rushika Nalamwar</p>
-            <p>Sahil Kindarle</p>
-            <!-- <p>Krushn Dayshmookh</p>
-            <p>Krushn Dayshmookh</p> -->
-
-            
-            
+              <div class="row">
+                <div
+                  class="col s12 m6 l4"
+                  v-for="member in team"
+                  :key="member.github"
+                >
+                  <div class="card">
+                    <div class="card-image">
+                      <img
+                        :src="'https://github.com/'+member.github+'.png'"
+                        alt=""
+                        class="zoomer"
+                      />
+                    </div>
+                    <div class="card-content">
+                      <span>{{ member.name }}</span>
+                      <a
+                        class="right"
+                        :href="'https://github.com/'+member.github"
+                      >
+                        <i class="material-icons">launch</i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
