@@ -43,7 +43,7 @@
         <li><a href="https://root-kings.github.io">Root Kings</a></li>
       </ul>
     </header> -->
-    <main>
+    <main id="app">
       <section id="welcome" class="valign-wrapper">
         <div class="full-width">
           <div class="row root-dark">
@@ -123,7 +123,7 @@
             <div
               class="col s12 padded-bottom-cozy padded-left-cozy padded-right-cozy"
             >
-              <div id="app" class="row">
+              <div class="row">
                 <div v-for="project in projects" class="col s12 m6 l4">
                   <div class="card">
                     <div class="card-image">
@@ -378,8 +378,8 @@
 </html>
 
 <script>
-  var app4 = new Vue({
-    el: "#app",
+  var app = new Vue({
+    el: '#app',
     data: {
       projects: [
         {
