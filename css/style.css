@@ -8,10 +8,74 @@ a.breadcrumb::before {
 }
 
 body {
-  /* color: #ffffff; */
-  /* background: #1b1b12; */
+  color: #ffffff;
+  background: #131415;
   font-family: 'Montserrat';
 }
+
+.page-footer,
+.footer-copyright {
+  background-color: #131415 !important;
+}
+
+.table-of-contents a.active {
+  color: #ffffff;
+  border-left-color: #ffffff;
+}
+
+.table-of-contents a:hover {
+  border-left-color: #ffffff;
+}
+
+.card {
+  background: #121212;
+}
+
+a.user {
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+img.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: 0.15s all ease-out;
+}
+
+img.avatar:hover {
+  /* width: 128px;
+  height: 128px;
+  border-radius: 4px;
+  margin-top: -48px;
+  margin-left: -48px; */
+
+  transform: scaleX(4) scaleY(4);
+}
+
+span.username {
+  margin-left: 16px;
+}
+
+span.dotted-link {
+  border-bottom: 1px dotted #555555;
+  transition: 0.3s all ease-out;
+}
+
+span.dotted-link:hover {
+  border-bottom: 1px solid #ffffff;
+}
+
+.btn.cta {
+  transition: 0.15s all ease-out;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.btn.cta:hover {
+  transform: scaleX(1.1) scaleY(1.1);
+}
+
 /* -- root kings colors -- */
 .root-light {
   background: #ffffff;
@@ -49,52 +113,35 @@ body {
 
 /* -- responsive -- */
 /* small */
-#welcome h1 {
-  /* font-size: 48pt; */
-  font-weight: 600;
+
+.logo {
+  width: 64px;
 }
 
-#welcome img {
-  height: 300px;
+.logo-type {
+  font-size: 2.5rem;
+}
+
+h4 {
+  font-size: 1.9rem;
 }
 
 /* medium */
 @media only screen and (min-width: 601px) {
-  #welcome h1 {
-    font-size: 72pt;
-    font-weight: 600;
+  h4 {
+    font-size: 2.28rem;
   }
 
-  #welcome .col {
-    height: 512px;
+  .logo {
+    width: 128px;
   }
 
-  #welcome img {
-    height: 512px;
-  }
-}
-
-/* large */
-@media only screen and (min-width: 992px) {
-  #welcome h1 {
-    font-size: 144pt;
-    font-weight: 600;
-  }
-
-  #welcome .col {
-    height: 768px;
-  }
-
-  #welcome img {
-    height: 768px;
+  .logo-type {
+    font-size: 2.92rem;
   }
 }
 
 /* -- -- -- */
-
-#welcome h1 {
-  margin-left: -0.09em;
-}
 
 a {
   font-family: 'Courier New', Courier, monospace;
@@ -111,11 +158,25 @@ a {
 }
 
 .underlined {
-  border-bottom: 3px solid #386641;
+  border-bottom: 2px solid #555555;
 }
 
-.underlined.dark {
-  border-bottom: 3px solid #ffffff;
+.tabs {
+  background: transparent !important;
+}
+
+.tabs .tab a {
+  color: #555555;
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+  color: #ffffff;
+}
+
+.tabs .indicator {
+  height: 1px;
+  background-color: #ffffff;
 }
 
 .contact-link {

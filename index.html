@@ -21,365 +21,187 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   </head>
   <body>
-    <header>
-      <nav class="root-dark">
-        <div class="nav-wrapper">
-          <!-- <a href="/" class="brand-logo">
-            <img src="/images/logo_white_nav.png" alt="logo" />
-          </a> -->
-          <a href="#" data-target="mobile-nav" class="sidenav-trigger">
-            <i class="material-icons">menu</i>
-          </a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#about">about</a></li>
-            <!-- <li><a href="#portfolio">portfolio</a></li> -->
-            <!-- <li><a href="#clients">clients</a></li> -->
-            <!-- <li><a href="#products">products</a></li> -->
-            <li><a href="#team">team</a></li>
-            <li><a href="#contact">contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <ul class="sidenav" id="mobile-nav">
-        <li><a href="#about">about</a></li>
-        <!-- <li><a href="#portfolio">portfolio</a></li> -->
-        <!-- <li><a href="#clients">clients</a></li> -->
-        <!-- <li><a href="#products">products</a></li> -->
-        <li><a href="#team">team</a></li>
-        <li><a href="#contact">contact</a></li>
-      </ul>
-    </header>
-    <main id="app">
-      <section class="root-dark">
-        <div class="container">
-          <div class="row">
-            <div class="col s8 m4 offset-s2">
-              <div class="center">
-                <img src="/images/logo_white.png" alt="logo" class="full-width"/>
-              </div>
-            </div>
-            <div class="col s12 m8 margined-bottom-comfortable">
-              
-              <h1 class="light strong white-text shadow-text">Root Kings</h1>
-              <h4 class="text-monospace"> > Building the future</h4>
-            </div>
-            </div>
+    <header class="padded-top-compact hide-on-small-only">
+      <div class="container">
+        <div class="row valign-wrapper no-margin">
+          <div class="col s3 right-align">
+            <img src="/images/logo_white.png" alt="logo" class="logo" />
+          </div>
+          <div class="col s9 valign-wrapper">
+            <h3 class="light strong white-text shadow-text logo-type">
+              Root Kings
+            </h3>
           </div>
         </div>
-        
-      </section>
+      </div>
+    </header>
 
-      <section id="about">
-        <div class="container">
-          <div class="row">
-            <div class="col s12 padded-top-cozy padded-bottom-cozy">
-              <h1 class="light">
-                <span class="underlined">about us</span>
-              </h1>
-            </div>
-
-            <div
-              class="col s12 m7 padded-bottom-cozy "
+    <header class="padded-top-compact hide-on-med-and-up">
+      <div class="container">
+        <div class="row no-margin">
+          <div class="col s12 m3 center-align">
+            <img src="/images/logo_white.png" alt="logo" class="logo" />
+          </div>
+          <div class="col s12 m9">
+            <h3
+              class="light strong white-text shadow-text logo-type center no-margin margined-bottom-comfortable"
             >
-              <p class="light flow-text">
+              Root Kings
+            </h3>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="app">
+      <div class="container">
+        <div class="row">
+          <div class="col hide-on-small-only m3 l2 padded-top-cozy">
+            <ul class="section table-of-contents">
+              <li>
+                <a
+                  @click="showSection('introduction')"
+                  :class="{active: section == 'introduction'}"
+                >
+                  Introduction
+                </a>
+              </li>
+              <li>
+                <a
+                  @click="showSection('team')"
+                  :class="{active: section == 'team'}"
+                >
+                  Team
+                </a>
+              </li>
+              <li>
+                <a
+                  @click="showSection('contact')"
+                  :class="{active: section == 'contact'}"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="center hide-on-med-and-up">
+            <ul class="tabs">
+              <li class="tab">
+                <a
+                  @click="showSection('introduction')"
+                  :class="{active: section == 'introduction'}"
+                >
+                  <i class="material-icons">info</i>
+                </a>
+              </li>
+              <li class="tab">
+                <a
+                  @click="showSection('team')"
+                  :class="{active: section == 'team'}"
+                >
+                  <i class="material-icons">people</i>
+                </a>
+              </li>
+              <li class="tab">
+                <a
+                  @click="showSection('contact')"
+                  :class="{active: section == 'contact'}"
+                >
+                  <i class="material-icons">phone</i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col s12 m9 offset-l1 l9">
+            <div id="introduction" v-if="section == 'introduction'">
+              <h4 class="light margined-bottom-comfortable">
+                <span class="underlined">Introduction</span>
+              </h4>
+
+              <p class="light grey-text text-lighten-3">
                 Starting out as a team for summer projects, we banded together
                 as partners in a startup to make technology fun and accessible
                 for everyone.
               </p>
-              <p class="light flow-text">
+              <p class="light grey-text text-lighten-3">
                 We are a startup based in Nagpur working on latest in web, data
                 science, internet of things, cloud computing and advancements in
                 software trying to build a better future for all humanity.
               </p>
-            </div>
 
-            <div class="col s12 m5 padded-left-cozy padded-right-cozy">
-              <img
-                src="/images/section-bg/about.svg"
-                alt=""
-                class="section-bg"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- <section id="projects">
-        <div class="container">
-          <div class="row">
-            <div class="col s12 padded-cozy">
-              <h1 class="light">projects</h1>
-            </div>
-
-            <div
-              class="col s12 padded-bottom-cozy padded-left-cozy padded-right-cozy"
-            >
-              <div class="row">
-                <div v-for="project in projects" class="col s12 m6 l4">
-                  <div class="card">
-                    <div class="card-image">
-                      <img src="/images/office.jpg" alt="" />
-                    </div>
-                    <div class="card-content">
-                      <span class="card-title">{{ project.title }}</span>
-                      <p>{{ project.text }}</p>
-                    </div>
-                    <div class="card-action">
-                      <a href="#!" class="btn btn-flat root-orange-text">
-                        <i class="material-icons left">web</i> Homepage
-                      </a>
-                      <a href="#!" class="btn btn-flat root-orange-text">
-                        <i class="material-icons left">code</i> GitHub
-                      </a>
-                    </div>
-                  </div>
-                </div>
+              <div
+                class="btn margined-top-comfortable white black-text cta"
+                @click="showSection('contact')"
+              >
+                Get in touch
+                <i class="material-icons right">arrow_forward</i>
               </div>
             </div>
-          </div>
-        </div>
-      </section> -->
 
-      <section id="team">
-        <div class="container">
-          <div class="row">
-            <div class="col s12 padded-bottom-cozy">
-              <h1 class="light">
-                <span class="underlined">team</span>
-              </h1>
-            </div>
+            <div id="team" v-if="section == 'team'">
+              <h4 class="light margined-bottom-comfortable">
+                <span class="underlined">Team</span>
+              </h4>
 
-            <div
-              class="col s12 padded-bottom-cozy"
-            >
               <div class="row">
                 <div
-                  class="col s12 m6 l4"
+                  class="col s12 m6"
                   v-for="member in team"
                   :key="member.github"
                 >
-                  <div class="card">
-                    <div class="card-image">
-                      <img
-                        :src="'https://github.com/'+member.github+'.png'"
-                        alt=""
-                        class="zoomer"
-                      />
-                    </div>
-                    <div class="card-content">
-                      <span>{{ member.name }}</span>
-                      <a
-                        class="right"
-                        :href="'https://github.com/'+member.github"
-                      >
-                        <i class="material-icons">launch</i>
-                      </a>
-                    </div>
-                  </div>
+                  <a
+                    class="user valign-wrapper"
+                    :href="'https://github.com/'+member.github"
+                  >
+                    <img
+                      class="avatar"
+                      :src="'https://github.com/'+member.github+'.png'"
+                      :alt="member.name +'\'s Photo'"
+                    />
+
+                    <span class="username dotted-link">{{ member.name }}</span>
+                  </a>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <section id="contact">
-        <div class="container">
-          <div class="row">
-            <div class="col s12 padded-bottom-cozy">
-              <h1 class="light">
-                <span class="underlined">contact us</span>
-              </h1>
-            </div>
+            <div id="contact" v-if="section == 'contact'">
+              <h4 class="light margined-bottom-comfortable">
+                <span class="underlined">Contact</span>
+              </h4>
 
-            <div
-              class="col s12 padded-bottom-cozy"
-            >
               <p class="light contact-link">
-                <a href="mailto:contact@rootkings.dev">
+                <a
+                  class="grey-text text-lighten-3"
+                  href="mailto:contact@rootkings.dev"
+                >
                   <i class="material-icons left">email</i>
-                  contact@rootkings.dev</a>
+                  <span class="dotted-link">contact@rootkings.dev</span>
+                </a>
               </p>
               <p class="light contact-link">
-                <a href="tel:+918800193714">
+                <a class="grey-text text-lighten-3" href="tel:+918800193714">
                   <i class="material-icons left">phone</i>
-                  +91 88001 93714</a>
+                  <span class="dotted-link">+91 88001 93714</span>
+                </a>
               </p>
-	      <p class="light contact-link">
-                <a href="tel:+917767060939">
+              <p class="light contact-link">
+                <a class="grey-text text-lighten-3" href="tel:+917767060939">
                   <i class="material-icons left">phone</i>
-                  +91 77670 60939</a>
+                  <span class="dotted-link">+91 77670 60939</span>
+                </a>
               </p>
             </div>
-
-            <!-- <div class="col s12 m5 padded-left-cozy padded-right-cozy">
-							<img src="/images/section-bg/contact.svg" alt="" class="section-bg">
-						</div> -->
           </div>
         </div>
-      </section>
-
-      <!-- <section id="portfolio" class="root-dark">
-        <div class="container">
-          <div class="row">
-            <div class="col s12 padded-cozy">
-              <h1 class="light white-text">
-                our portfolio
-              </h1>
-            </div>
-
-            <div class="col s12 padded-bottom-cozy padded-left-cozy padded-right-cozy">
-              <div class="row">
-								<div class="col s12 m6 l4">
-									<div class="card">
-										<div class="card-image">
-											<img src="/images/office.jpg" alt="">
-										</div>
-										<div class="card-content">
-											<span class="card-title">Project 1</span>
-											<p>Website</p>
-										</div>
-										<div class="card-action">
-											<a href="#!" class="btn btn-flat root-orange-text">
-												<i class="material-icons left">web</i> Homepage
-											</a>
-											<a href="#!" class="btn btn-flat root-orange-text">
-												<i class="material-icons left">code</i> GitHub
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="col s12 m6 l4">
-									<div class="card">
-										<div class="card-image">
-											<img src="/images/office.jpg" alt="">
-										</div>
-										<div class="card-content">
-											<span class="card-title">Project 1</span>
-											<p>Website</p>
-										</div>
-										<div class="card-action">
-											<a href="#!" class="btn btn-flat root-orange-text">
-												<i class="material-icons left">web</i> Homepage
-											</a>
-											<a href="#!" class="btn btn-flat root-orange-text">
-												<i class="material-icons left">code</i> GitHub
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="col s12 m6 l4">
-									<div class="card">
-										<div class="card-image">
-											<img src="/images/office.jpg" alt="">
-										</div>
-										<div class="card-content">
-											<span class="card-title">Project 1</span>
-											<p>Website</p>
-										</div>
-										<div class="card-action">
-											<a href="#!" class="btn btn-flat root-orange-text">
-												<i class="material-icons left">web</i> Homepage
-											</a>
-											<a href="#!" class="btn btn-flat root-orange-text">
-												<i class="material-icons left">code</i> GitHub
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="col s12 m6 l4">
-									<div class="card">
-										<div class="card-image">
-											<img src="/images/office.jpg" alt="">
-										</div>
-										<div class="card-content">
-											<span class="card-title">Project 1</span>
-											<p>Website</p>
-										</div>
-										<div class="card-action">
-											<a href="#!" class="btn btn-flat root-orange-text">
-												<i class="material-icons left">web</i> Homepage
-											</a>
-											<a href="#!" class="btn btn-flat root-orange-text">
-												<i class="material-icons left">code</i> GitHub
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="col s12 m6 l4">
-									<div class="card">
-										<div class="card-image">
-											<img src="/images/office.jpg" alt="">
-										</div>
-										<div class="card-content">
-											<span class="card-title">Project 1</span>
-											<p>Website</p>
-										</div>
-										<div class="card-action">
-											<a href="#!" class="btn btn-flat root-orange-text">
-												<i class="material-icons left">web</i> Homepage
-											</a>
-											<a href="#!" class="btn btn-flat root-orange-text">
-												<i class="material-icons left">code</i> GitHub
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="col s12 m6 l4">
-									<div class="card">
-										<div class="card-image">
-											<img src="/images/office.jpg" alt="">
-										</div>
-										<div class="card-content">
-											<span class="card-title">Project 1</span>
-											<p>Website</p>
-										</div>
-										<div class="card-action">
-											<a href="#!" class="btn btn-flat root-orange-text">
-												<i class="material-icons left">web</i> Homepage
-											</a>
-											<a href="#!" class="btn btn-flat root-orange-text">
-												<i class="material-icons left">code</i> GitHub
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="col s12 m6 l4">
-									<div class="card">
-										<div class="card-image">
-											<img src="/images/office.jpg" alt="">
-										</div>
-										<div class="card-content">
-											<span class="card-title">Project 1</span>
-											<p>Website</p>
-										</div>
-										<div class="card-action">
-											<a href="#!" class="btn btn-flat root-orange-text">
-												<i class="material-icons left">web</i> Homepage
-											</a>
-											<a href="#!" class="btn btn-flat root-orange-text">
-												<i class="material-icons left">code</i> GitHub
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						!-- <div class="col s12 m5 padded-left-cozy padded-right-cozy">
-							<img src="/images/section-bg/about.svg" alt="" class="section-bg">
-						</div> --
-          </div>
-				</div>
-
-
-
-      </section> -->
+      </div>
     </main>
 
-    <footer class="page-footer white darken-2">
+    <footer class="page-footer">
       <div class="footer-copyright">
-        <div class="container center black-text text-monospace">
+        <div class="container center grey-text text-monospace">
           &copy Copyright 2021 Root Kings.
         </div>
       </div>
@@ -394,35 +216,30 @@
   var app = new Vue({
     el: '#app',
     data: {
-      projects: [
-        {
-          title: 'Humbleshit',
-          text: 'App for facility management',
-        },
-        { title: 'STOQ', text: 'Trading automated strategies' },
-        { title: 'Naai', text: 'Online Service Booking App' },
-        { title: 'Quanrum', text: 'TradeBot' },
-        { title: 'Clavi', text: 'Academic Assistant' },
-        { title: 'Flora', text: 'Farm Assistant App' },
-        { title: 'Liberty', text: 'Library Booking System' },
-        { title: 'GHRCE Feedback', text: 'Feedback Collection System' },
-        { title: 'Crunch', text: 'Canteen Manager' },
-      ],
+      section: 'introduction',
+
+      projects: [],
 
       team: [
-	{ name: 'Shivangi Shukla', github: 'ShivangiShukla21' },
+        { name: 'Shivangi Shukla', github: 'ShivangiShukla21' },
         { name: 'Krushn Dayshmookh', github: 'krushndayshmookh' },
-	{ name: 'Vithika Jha', github: 'vithikaa' }, 
-	{ name: 'Shreyas Malewar', github: 'shreyasmalewar' },
+        { name: 'Vithika Jha', github: 'vithikaa' },
+        { name: 'Shreyas Malewar', github: 'shreyasmalewar' },
         { name: 'Sharvari Dhomne', github: 'sharvaridhomne' },
-	{ name: 'Tushar Joshi', github: 'tushar2179' },
-        { name: 'Sahil Kindarle', github: 'SahilKindarle' }, 
+        { name: 'Tushar Joshi', github: 'tushar2179' },
+        { name: 'Sahil Kindarle', github: 'SahilKindarle' },
         { name: 'Mrunal Singh Zire', github: 'mszire' },
         { name: 'Aditi Sulke', github: 'aditisulke' },
         { name: 'Pratik Pithore', github: 'Pratik-sys' },
-	{ name: 'Kaushal Agnihotri', github: 'kaushalagnihotri' },
+        { name: 'Kaushal Agnihotri', github: 'kaushalagnihotri' },
         { name: 'Rushika Nalamwar', github: 'rushikanalamwar' },
       ],
+    },
+
+    methods: {
+      showSection(section) {
+        this.section = section
+      },
     },
   })
 </script>
