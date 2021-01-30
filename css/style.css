@@ -176,7 +176,7 @@ a {
 
 .tabs .indicator {
   height: 1px;
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 .contact-link {
