@@ -37,6 +37,25 @@
 
     <link rel="shortcut icon" href="/logo.png" type="image/png" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Root Kings" />
+    <meta name="apple-mobile-web-app-title" content="Root Kings" />
+    <meta name="theme-color" content="#131415" />
+    <meta name="msapplication-navbutton-color" content="#131415" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="msapplication-starturl" content="/" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <link
       rel="stylesheet"
@@ -263,12 +282,11 @@
             { name: 'Rushika Nalamwar', github: 'rushikanalamwar' },
           ],
         },
-        
-        
-        mounted(){
+
+        mounted() {
           M.AutoInit()
         },
-        
+
         methods: {
           showSection(section) {
             this.section = section
@@ -277,5 +295,11 @@
       })
     </script>
 
+    <script type="module">
+      import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate'
+
+      const el = document.createElement('pwa-update')
+      document.body.appendChild(el)
+    </script>
   </body>
 </html>
