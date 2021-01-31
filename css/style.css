@@ -23,6 +23,10 @@ body {
   border-left-color: #ffffff;
 }
 
+.table-of-contents a {
+  color: #999999;
+}
+
 .table-of-contents a:hover {
   border-left-color: #ffffff;
 }
@@ -166,7 +170,7 @@ a {
 }
 
 .tabs .tab a {
-  color: #555555;
+  color: #999999;
 }
 
 .tabs .tab a:hover,
