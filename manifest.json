@@ -1,0 +1,28 @@
+{
+  "name": "Root Kings",
+  "short_name": "Root Kings",
+  "description": "Root Kings Home Page",
+  "lang": "en",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#131415",
+  "background_color": "#131415",
+  "icons": [
+    {
+      "src": "/images/logo-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
