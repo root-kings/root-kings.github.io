@@ -38,7 +38,7 @@
     />
     <link rel="stylesheet" href="/css/lib/dayshmookh.gradients.css" />
     <link rel="stylesheet" href="/css/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    
   </head>
   <body>
     <header class="padded-top-compact hide-on-small-only">
@@ -228,38 +228,45 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="/js/init.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2" onload="initVue" defer async></script>
+    <script>
+      function initVue(){
+      var app = new Vue({
+        el: '#app',
+        data: {
+          section: 'introduction',
+
+          projects: [],
+
+          team: [
+            { name: 'Shivangi Shukla', github: 'ShivangiShukla21' },
+            { name: 'Krushn Dayshmookh', github: 'krushndayshmookh' },
+            { name: 'Vithika Jha', github: 'vithikaa' },
+            { name: 'Shreyas Malewar', github: 'shreyasmalewar' },
+            { name: 'Sharvari Dhomne', github: 'sharvaridhomne' },
+            { name: 'Tushar Joshi', github: 'tushar2179' },
+            { name: 'Sahil Kindarle', github: 'SahilKindarle' },
+            { name: 'Mrunal Singh Zire', github: 'mszire' },
+            { name: 'Aditi Sulke', github: 'aditisulke' },
+            { name: 'Pratik Pithore', github: 'Pratik-sys' },
+            { name: 'Kaushal Agnihotri', github: 'kaushalagnihotri' },
+            { name: 'Rushika Nalamwar', github: 'rushikanalamwar' },
+          ],
+        },
+        
+        
+        mounted(){
+          M.AutoInit()
+        },
+        
+        methods: {
+          showSection(section) {
+            this.section = section
+          },
+        },
+      })
+      }
+    </script>
+
   </body>
 </html>
-
-<script>
-  var app = new Vue({
-    el: '#app',
-    data: {
-      section: 'introduction',
-
-      projects: [],
-
-      team: [
-        { name: 'Shivangi Shukla', github: 'ShivangiShukla21' },
-        { name: 'Krushn Dayshmookh', github: 'krushndayshmookh' },
-        { name: 'Vithika Jha', github: 'vithikaa' },
-        { name: 'Shreyas Malewar', github: 'shreyasmalewar' },
-        { name: 'Sharvari Dhomne', github: 'sharvaridhomne' },
-        { name: 'Tushar Joshi', github: 'tushar2179' },
-        { name: 'Sahil Kindarle', github: 'SahilKindarle' },
-        { name: 'Mrunal Singh Zire', github: 'mszire' },
-        { name: 'Aditi Sulke', github: 'aditisulke' },
-        { name: 'Pratik Pithore', github: 'Pratik-sys' },
-        { name: 'Kaushal Agnihotri', github: 'kaushalagnihotri' },
-        { name: 'Rushika Nalamwar', github: 'rushikanalamwar' },
-      ],
-    },
-
-    methods: {
-      showSection(section) {
-        this.section = section
-      },
-    },
-  })
-</script>
