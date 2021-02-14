@@ -69,6 +69,22 @@
     />
     <link rel="stylesheet" href="/css/lib/dayshmookh.gradients.css" />
     <link rel="stylesheet" href="/css/style.css" />
+    
+    
+    <!-- push notifications -->
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "b14cb79c-9498-4e96-8718-eb4bebdb0bc2",
+      notifyButton: {
+        enable: true,
+      },
+    });
+  });
+</script>
+    
   </head>
   <body>
     <header class="padded-top-compact hide-on-small-only">
@@ -292,7 +308,7 @@
     <footer class="page-footer">
       <div class="footer-copyright">
         <div class="container center grey-text text-monospace">
-          &copy Copyright 2021 Root Kings.
+          &copy; 2021 Root Kings. All Rights Reserved. 
         </div>
       </div>
     </footer>
