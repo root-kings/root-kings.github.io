@@ -118,6 +118,14 @@
               </li>
               <li>
                 <a
+                  @click="showSection('clients')"
+                  :class="{active: section == 'clients'}"
+                >
+                  Clients
+                </a>
+              </li>
+              <li>
+                <a
                   @click="showSection('team')"
                   :class="{active: section == 'team'}"
                 >
@@ -143,6 +151,14 @@
                   :class="{active: section == 'introduction'}"
                 >
                   <i class="material-icons">info</i>
+                </a>
+              </li>
+              <li class="tab">
+                <a
+                  @click="showSection('clients')"
+                  :class="{active: section == 'clients'}"
+                >
+                  <i class="material-icons">business</i>
                 </a>
               </li>
               <li class="tab">
@@ -187,6 +203,30 @@
               >
                 Get in touch
                 <i class="material-icons right">arrow_forward</i>
+              </div>
+            </div>
+
+            <div id="clients" v-if="section == 'clients'">
+              <h4 class="light margined-bottom-comfortable">
+                <span class="underlined">Clients</span>
+              </h4>
+
+              <div class="row">
+                <div
+                  class="col s12 m6"
+                  v-for="client in clients"
+                  :key="client.codename"
+                >
+                  <div class="user valign-wrapper">
+                    <img
+                      class="avatar"
+                      :src="'/images/clients/' + (client.g ? 'generic' : client.codename) + '.png'"
+                      :alt="client.name +'\'s Photo'"
+                    />
+
+                    <span class="username">{{ client.name }}</span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -266,6 +306,29 @@
           section: 'introduction',
 
           projects: [],
+
+          clients: [
+            { codename: 'sparc', name: 'Sparc Associates' },
+            { codename: 'humbleshit', name: 'Humbleshit' },
+            { codename: 'stoq', name: 'STOQ Club' },
+            { codename: 'naai', name: 'Naai' },
+            { codename: 'ssevents', name: 'SS Events' },
+            { codename: 'superrfan', name: 'Superrfan' , g: true},
+            { codename: 'rainbow-creations', name: 'Rainbow Creations' , g: true},
+            { codename: 'numerio', name: 'Numerio' , g: true},
+            { codename: 'iwm', name: 'Indian Web Mart' , g: true},
+            { codename: 'syslogyx', name: 'Syslogyx' , g: true},
+            { codename: 'cii', name: 'CII' , g: true},
+            { codename: 'klathrate', name: 'Klathrate' , g: true},
+            { codename: 'quanram', name: 'Quanram' , g: true},
+            { codename: 'rupee-rabbit', name: 'Rupee Rabbit' , g: true},
+            { codename: 'adlon', name: 'Adlon' , g: true},
+            { codename: 'global-shapers', name:'Global Shapers Community Nagpur', g: true},
+            { codename: 'ofaj', name: 'Ordnance Factory Ambajhari' , g: true},
+            { codename: 'ghrce', name: 'G. H. Raisoni College of Engineering' , g: true},
+            { codename: 'agneepankh', name: 'Agneepankh' , g: true},
+            { codename: 'dayshmookh-health', name: 'Dayshmookh Health' , g: true},
+          ],
 
           team: [
             { name: 'Shivangi Shukla', github: 'ShivangiShukla21' },
