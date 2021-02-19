@@ -69,8 +69,7 @@
     />
     <link rel="stylesheet" href="/css/lib/dayshmookh.gradients.css" />
     <link rel="stylesheet" href="/css/style.css" />
-    
-    
+
     <!-- push notifications -->
     <!-- <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script> -->
     <!-- <script>
@@ -84,7 +83,6 @@
         });
       });
     </script> -->
-    
   </head>
   <body>
     <header class="padded-top-compact hide-on-small-only">
@@ -241,6 +239,26 @@
                     />
 
                     <span class="username">{{ client.name }}</span>
+                    <a
+                      :href="client.web"
+                      class="tooltipped"
+                      data-position="top"
+                      data-tooltip="Open Website"
+                      v-if="client.web"
+                    >
+                      <i class="material-icons tiny right blue-text">public</i>
+                    </a>
+                    <a
+                      :href="client.app"
+                      class="tooltipped"
+                      data-position="top"
+                      data-tooltip="Visit App"
+                      v-if="client.app"
+                    >
+                      <i class="material-icons tiny right green-text"
+                        >android</i
+                      >
+                    </a>
                   </div>
                 </div>
               </div>
@@ -308,7 +326,7 @@
     <footer class="page-footer">
       <div class="footer-copyright">
         <div class="container center grey-text text-monospace">
-          &copy; 2021 Root Kings. All Rights Reserved. 
+          &copy; 2021 Root Kings. All Rights Reserved.
         </div>
       </div>
     </footer>
@@ -324,26 +342,142 @@
           projects: [],
 
           clients: [
-            { codename: 'sparc', name: 'Sparc Associates' },
-            { codename: 'humbleshit', name: 'Humbleshit' },
-            { codename: 'stoq', name: 'STOQ Club' },
-            { codename: 'naai', name: 'Naai' },
-            { codename: 'ssevents', name: 'SS Events' },
-            { codename: 'superrfan', name: 'Superrfan' , g: true},
-            { codename: 'rainbow-creations', name: 'Rainbow Creations' , g: true},
-            { codename: 'numerio', name: 'Numerio' , g: true},
-            { codename: 'iwm', name: 'Indian Web Mart' , g: true},
-            { codename: 'syslogyx', name: 'Syslogyx' , g: true},
-            { codename: 'cii', name: 'CII' , g: true},
-            { codename: 'klathrate', name: 'Klathrate' , g: true},
-            { codename: 'quanram', name: 'Quanram' , g: true},
-            { codename: 'rupee-rabbit', name: 'Rupee Rabbit' , g: true},
-            { codename: 'adlon', name: 'Adlon' , g: true},
-            { codename: 'global-shapers', name:'Global Shapers Community Nagpur', g: true},
-            { codename: 'ofaj', name: 'Ordnance Factory Ambajhari' , g: true},
-            { codename: 'ghrce', name: 'G. H. Raisoni College of Engineering' , g: true},
-            { codename: 'agneepankh', name: 'Agneepankh' , g: true},
-            { codename: 'dayshmookh-health', name: 'Dayshmookh Health' , g: true},
+            {
+              codename: 'sparc',
+              name: 'Sparc Associates',
+              web: 'http://sparcassociates.com',
+              app: '',
+            },
+            {
+              codename: 'humbleshit',
+              name: 'Humbleshit',
+              web: 'https://humbleshit.com',
+              app: '',
+            },
+            {
+              codename: 'stoq',
+              name: 'STOQ Club',
+              web: 'https://stoq.club',
+              app:
+                'https://play.google.com/store/apps/details?id=club.stoq.app',
+            },
+            {
+              codename: 'naai',
+              name: 'Naai',
+              web: 'https://naai.co.in',
+              app: '',
+            },
+            {
+              codename: 'ssevents',
+              name: 'SS Events',
+              web: 'https://sgyaanevents.com',
+              app: '',
+            },
+            {
+              codename: 'superrfan',
+              name: 'Superrfan',
+              g: true,
+              web: '',
+              app: '',
+            },
+            {
+              codename: 'rainbow-creations',
+              name: 'Rainbow Creations',
+              g: true,
+              web: 'http://rainbow-creations.in',
+              app: '',
+            },
+            {
+              codename: 'numerio',
+              name: 'Numerio',
+              g: true,
+              web: 'http://numerio.in',
+              app: '',
+            },
+            {
+              codename: 'iwm',
+              name: 'Indian Web Mart',
+              g: true,
+              web: '',
+              app: '',
+            },
+            {
+              codename: 'syslogyx',
+              name: 'Syslogyx',
+              g: true,
+              web: '',
+              app: '',
+            },
+            {
+              codename: 'cii',
+              name: 'CII',
+              g: true,
+              web: '',
+              app: '',
+            },
+            {
+              codename: 'klathrate',
+              name: 'Klathrate',
+              g: true,
+              web: '',
+              app: '',
+            },
+            {
+              codename: 'quanram',
+              name: 'Quanram',
+              g: true,
+              web: '',
+              app: '',
+            },
+            {
+              codename: 'rupee-rabbit',
+              name: 'Rupee Rabbit',
+              g: true,
+              web: '',
+              app: '',
+            },
+            {
+              codename: 'adlon',
+              name: 'Adlon',
+              g: true,
+              web: '',
+              app: '',
+            },
+            {
+              codename: 'global-shapers',
+              name: 'Global Shapers Community Nagpur',
+              g: true,
+              web: '',
+              app: '',
+            },
+            {
+              codename: 'ofaj',
+              name: 'Ordnance Factory Ambajhari',
+              g: true,
+              web: '',
+              app: '',
+            },
+            {
+              codename: 'ghrce',
+              name: 'G. H. Raisoni College of Engineering',
+              g: true,
+              web: '',
+              app: '',
+            },
+            {
+              codename: 'agneepankh',
+              name: 'Agneepankh',
+              g: true,
+              web: '',
+              app: '',
+            },
+            {
+              codename: 'dayshmookh-health',
+              name: 'Dayshmookh Health',
+              g: true,
+              web: '',
+              app: '',
+            },
           ],
 
           team: [
@@ -362,7 +496,7 @@
           ],
         },
 
-        mounted() {
+        updated() {
           M.AutoInit()
         },
 
