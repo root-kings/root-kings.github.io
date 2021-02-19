@@ -8,27 +8,27 @@ a.breadcrumb::before {
 }
 
 body {
-  color: #ffffff;
-  background: #131415;
+  color: #131415;
+  background: #ffffff;
   font-family: 'Montserrat';
 }
 
 .page-footer,
 .footer-copyright {
-  background-color: #131415 !important;
+  background-color: #ffffff !important;
 }
 
 .table-of-contents a.active {
-  color: #ffffff;
-  border-left-color: #ffffff;
+  color: #131415;
+  border-left-color: #131415;
 }
 
 .table-of-contents a {
-  color: #999999;
+  color: #555555;
 }
 
 .table-of-contents a:hover {
-  border-left-color: #ffffff;
+  border-left-color: #000000;
 }
 
 .card {
@@ -37,7 +37,7 @@ body {
 
 .user {
   margin-bottom: 16px;
-  color: #ffffff;
+  color: #131415;
 }
 
 img.avatar {
@@ -67,7 +67,7 @@ span.dotted-link {
 }
 
 span.dotted-link:hover {
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #131415;
 }
 
 .btn.cta {
@@ -158,7 +158,7 @@ a {
 }
 
 .shadow-text {
-  text-shadow: 0 1px 4px #131313;
+  text-shadow: 0 1px 4px #999999;
 }
 
 .underlined {
@@ -170,12 +170,12 @@ a {
 }
 
 .tabs .tab a {
-  color: #999999;
+  color: #777777;
 }
 
 .tabs .tab a:hover,
 .tabs .tab a.active {
-  color: #ffffff;
+  color: #131415;
 }
 
 .tabs .indicator {
