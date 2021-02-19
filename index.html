@@ -245,6 +245,7 @@
                       data-position="top"
                       data-tooltip="Open Website"
                       v-if="client.web"
+                      target="_blank"
                     >
                       <i class="material-icons tiny right blue-text">public</i>
                     </a>
@@ -254,6 +255,7 @@
                       data-position="top"
                       data-tooltip="Visit App"
                       v-if="client.app"
+                      target="_blank"
                     >
                       <i class="material-icons tiny right green-text"
                         >android</i
@@ -278,6 +280,7 @@
                   <a
                     class="user valign-wrapper"
                     :href="'https://github.com/'+member.github"
+                    target="_blank"
                   >
                     <img
                       class="avatar"
