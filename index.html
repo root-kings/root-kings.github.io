@@ -297,6 +297,33 @@
                   </a>
                 </div>
               </div>
+
+<h4 class="light margined-bottom-comfortable">
+                <span class="underlined">Alumni</span>
+              </h4>
+
+              <div class="row">
+                <div
+                  class="col s12 m6"
+                  v-for="member in alumni"
+                  :key="member.github"
+                >
+                  <a
+                    class="user valign-wrapper"
+                    :href="'https://github.com/'+member.github"
+                    target="_blank"
+                  >
+                    <img
+                      class="avatar"
+                      :src="'https://github.com/'+member.github+'.png'"
+                      :alt="member.name +'\'s Photo'"
+                    />
+
+                    <span class="username dotted-link">{{ member.name }}</span>
+                  </a>
+                </div>
+              </div>
+
             </div>
 
             <div id="contact" v-if="section == 'contact'">
@@ -483,11 +510,20 @@
           team: [
             { name: 'Shivangi Shukla', github: 's-shivangi' },
             { name: 'Krushn Dayshmookh', github: 'krushndayshmookh' },
-            { name: 'Vithika Jha', github: 'vithikaa' },
+            
             { name: 'Shreyas Malewar', github: 'shreyasmalewar' },
-            { name: 'Sharvari Dhomne', github: 'sharvaridhomne' },
+
+{ name: 'Yash Kurzekar' , github: 'yashkurzekar' },
+{ name: 'Ankita Pimpalkar', github: 'Ankitapimpalkar12' }
+],
+
+alumni: [
+            { name: 'Vithika Jha', github: 'vithikaa' },
+
             { name: 'Tushar Joshi', github: 'tushar2179' },
             { name: 'Sahil Kindarle', github: 'SahilKindarle' },
+
+{ name: 'Sharvari Dhomne', github: 'sharvaridhomne' },
             { name: 'Mrunal Singh Zire', github: 'mszire' },
             { name: 'Aditi Sulke', github: 'aditisulke' },
             { name: 'Pratik Pithore', github: 'Pratik-sys' },
