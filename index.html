@@ -207,22 +207,36 @@
               </p>
               <p class="light grey-text text-lighten-3">
                 We are a startup based in Nagpur working on latest in web, data
-                science, internet of things, cloud computing and design. 
+                science, internet of things, cloud computing and design.
               </p>
 
               <p class="light grey-text text-lighten-3">
-                We help startups to build amazing products, driving the 
-                technology as we go together from Idea to production. 
+                We help startups to build amazing products, driving the
+                technology as we go together from Idea to production.
               </p>
 
-
               <div
-                class="btn margined-top-comfortable white black-text cta"
+                class="btn margined-top-comfortable margined-bottom-comfortable white black-text cta"
                 @click="showSection('contact')"
               >
                 Get in touch
                 <i class="material-icons right">arrow_forward</i>
               </div>
+
+              <h4 class="light margined-bottom-comfortable">
+                <span class="underlined">Services</span>
+              </h4>
+
+              <ul class="light grey-text text-lighten-3">
+                <li class="margined-bottom-compact">Web Development</li>
+                <li class="margined-bottom-compact">Mobile Applications</li>
+                <li class="margined-bottom-compact">Desktop Applications</li>
+                <li class="margined-bottom-compact">ML &amp; AI</li>
+                <li class="margined-bottom-compact">Game Development</li>
+                <li class="margined-bottom-compact">Bots and Automation</li>
+                <li class="margined-bottom-compact">Internet of Things</li>
+                <li class="margined-bottom-compact">Training</li>
+              </ul>
             </div>
 
             <div id="clients" v-if="section == 'clients'">
@@ -298,7 +312,7 @@
                 </div>
               </div>
 
-<h4 class="light margined-bottom-comfortable">
+              <h4 class="light margined-bottom-comfortable">
                 <span class="underlined">Alumni</span>
               </h4>
 
@@ -323,7 +337,6 @@
                   </a>
                 </div>
               </div>
-
             </div>
 
             <div id="contact" v-if="section == 'contact'">
@@ -353,9 +366,14 @@
                 </a>
               </p>
               <p class="light contact-link">
-                <a class="grey-text text-lighten-3" href="https://www.google.com/maps/place/Dayshmookh+Motel/@20.7984953,79.6191174,13.52z/data=!4m8!1m2!2m1!1s5km+stone+pauni+bhandara+road!3m4!1s0x0:0x3297aa9c988749be!8m2!3d20.817721!4d79.6537006">
+                <a
+                  class="grey-text text-lighten-3"
+                  href="https://www.google.com/maps/place/Dayshmookh+Motel/@20.7984953,79.6191174,13.52z/data=!4m8!1m2!2m1!1s5km+stone+pauni+bhandara+road!3m4!1s0x0:0x3297aa9c988749be!8m2!3d20.817721!4d79.6537006"
+                >
                   <i class="material-icons left">place</i>
-                  <span class="dotted-link">5km Stone, Pauni Bhandara SH 87 <br> Pauni - 441910
+                  <span class="dotted-link"
+                    >5km Stone, Pauni Bhandara SH 87 <br />
+                    Pauni - 441910
                   </span>
                 </a>
               </p>
@@ -477,7 +495,7 @@
             },
             {
               codename: 'global-shapers',
-              name: 'Global Shapers Community Nagpur',  
+              name: 'Global Shapers Community Nagpur',
               web: 'https://www.globalshapers.org/hubs/nagpur-hub',
               app: '',
             },
@@ -511,8 +529,8 @@
             { name: 'Shivangi Shukla', github: 's-shivangi' },
             { name: 'Krushn Dayshmookh', github: 'krushndayshmookh' },
             { name: 'Shreyas Malewar', github: 'shreyasmalewar' },
-            { name: 'Yash Kurzekar' , github: 'yashkurzekar' },
-            { name: 'Ankita Pimpalkar', github: 'Ankitapimpalkar12' }
+            { name: 'Yash Kurzekar', github: 'yashkurzekar' },
+            { name: 'Ankita Pimpalkar', github: 'Ankitapimpalkar12' },
           ],
 
           alumni: [
