@@ -141,10 +141,10 @@
               </li>
               <li>
                 <a
-                  @click="showSection('clients')"
-                  :class="{active: section == 'clients'}"
+                  @click="showSection('portfolio')"
+                  :class="{active: section == 'portfolio'}"
                 >
-                  Clients
+                  Portfolio
                 </a>
               </li>
               <li>
@@ -178,8 +178,8 @@
               </li>
               <li class="tab">
                 <a
-                  @click="showSection('clients')"
-                  :class="{active: section == 'clients'}"
+                  @click="showSection('portfolio')"
+                  :class="{active: section == 'portfolio'}"
                 >
                   <i class="material-icons">business</i>
                 </a>
@@ -249,7 +249,7 @@
               </ul>
             </div>
 
-            <div id="clients" v-if="section == 'clients'">
+            <div id="portfolio" v-if="section == 'portfolio'">
               <h4 class="light margined-bottom-comfortable">
                 <span class="underlined">Associates</span>
               </h4>
