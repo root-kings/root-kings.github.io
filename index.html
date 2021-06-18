@@ -108,7 +108,16 @@
           </div>
           <div class="col s12 m9">
             <h3
-              class="light strong white-text shadow-text logo-type center no-margin margined-bottom-comfortable"
+              class="
+                light
+                strong
+                white-text
+                shadow-text
+                logo-type
+                center
+                no-margin
+                margined-bottom-comfortable
+              "
             >
               Root Kings
             </h3>
@@ -216,7 +225,13 @@
               </p>
 
               <div
-                class="btn margined-top-comfortable margined-bottom-comfortable white black-text cta"
+                class="
+                  btn
+                  margined-top-comfortable margined-bottom-comfortable
+                  white
+                  black-text
+                  cta
+                "
                 @click="showSection('contact')"
               >
                 Get in touch
@@ -228,18 +243,57 @@
               </h4>
 
               <ul class="light grey-text text-lighten-3">
-                <li class="margined-bottom-compact">Web Development</li>
-                <li class="margined-bottom-compact">Mobile Applications</li>
-                <li class="margined-bottom-compact">Desktop Applications</li>
-                <li class="margined-bottom-compact">ML &amp; AI</li>
-                <li class="margined-bottom-compact">Game Development</li>
-                <li class="margined-bottom-compact">Bots and Automation</li>
-                <li class="margined-bottom-compact">Internet of Things</li>
-                <li class="margined-bottom-compact">Training</li>
+                <li v-for="service in services" class="margined-bottom-compact">
+                  {{ service }}
+                </li>
               </ul>
             </div>
 
             <div id="clients" v-if="section == 'clients'">
+              <h4 class="light margined-bottom-comfortable">
+                <span class="underlined">Associates</span>
+              </h4>
+
+              <div class="row">
+                <div
+                  class="col s12 m6"
+                  v-for="client in associates"
+                  :key="client.codename"
+                >
+                  <div class="user valign-wrapper">
+                    <img
+                      class="avatar"
+                      :src="'/images/clients/' + (client.g ? 'generic' : client.codename) + '.png'"
+                      :alt="client.name +'\'s Photo'"
+                    />
+
+                    <span class="username">{{ client.name }}</span>
+                    <a
+                      :href="client.web"
+                      class="tooltipped"
+                      data-position="top"
+                      data-tooltip="Open Website"
+                      v-if="client.web"
+                      target="_blank"
+                    >
+                      <i class="material-icons tiny right blue-text">public</i>
+                    </a>
+                    <a
+                      :href="client.app"
+                      class="tooltipped"
+                      data-position="top"
+                      data-tooltip="Visit App"
+                      v-if="client.app"
+                      target="_blank"
+                    >
+                      <i class="material-icons tiny right green-text"
+                        >android</i
+                      >
+                    </a>
+                  </div>
+                </div>
+              </div>
+
               <h4 class="light margined-bottom-comfortable">
                 <span class="underlined">Clients</span>
               </h4>
@@ -425,14 +479,31 @@
         data: {
           section: 'introduction',
 
+          services: [
+            'Web Development',
+            'Mobile Applications',
+            'Desktop Applications',
+            'ML &amp; AI',
+            'Game Development',
+            'Bots and Automation',
+            'Internet of Things',
+            'Training',
+          ],
+
           projects: [],
 
-          clients: [
+          associates: [
             {
-              codename: 'sparc',
-              name: 'Sparc Associates',
-              web: 'http://sparcassociates.com',
-              app: '',
+              codename: 'superrfan',
+              name: 'Superrfan',
+              web: 'https://superrfan.com',
+              app: 'https://app.superrfan.com',
+            },
+            {
+              codename: 'stoq',
+              name: 'STOQ Club',
+              web: 'https://stoq.club',
+              app: 'https://play.google.com/store/apps/details?id=club.stoq.app',
             },
             {
               codename: 'humbleshit',
@@ -441,11 +512,31 @@
               app: '',
             },
             {
-              codename: 'stoq',
-              name: 'STOQ Club',
-              web: 'https://stoq.club',
-              app:
-                'https://play.google.com/store/apps/details?id=club.stoq.app',
+              codename: 'dayshmookh-health',
+              name: 'Dayshmookh Health',
+              web: '',
+              app: '',
+            },
+            {
+              codename: 'mycoder',
+              name: 'MyCoder',
+              web: 'https://mycoder.pro',
+              app: '',
+            },
+            {
+              codename: 'generic',
+              name: 'Tradzapp',
+              web: 'https://tradzapp.com',
+              app: 'https://app.tradzapp.com',
+            },
+          ],
+
+          clients: [
+            {
+              codename: 'sparc',
+              name: 'Sparc Associates',
+              web: 'http://sparcassociates.com',
+              app: '',
             },
             {
               codename: 'naai',
@@ -458,12 +549,6 @@
               name: 'SS Events',
               web: 'https://sgyaanevents.com',
               app: '',
-            },
-            {
-              codename: 'superrfan',
-              name: 'Superrfan',
-              web: 'https://superrfan.com',
-              app: 'https://app.superrfan.com',
             },
             {
               codename: 'rainbow-creations',
@@ -546,6 +631,12 @@
             {
               codename: 'dayshmookh-health',
               name: 'Dayshmookh Health',
+              web: '',
+              app: '',
+            },
+            {
+              codename: 'generic',
+              name: 'Samtech India',
               web: '',
               app: '',
             },
