@@ -287,6 +287,32 @@
 
             <div id="team" v-if="section == 'team'">
               <h4 class="light margined-bottom-comfortable">
+                <span class="underlined">Founders</span>
+              </h4>
+
+              <div class="row">
+                <div
+                  class="col s12 m6"
+                  v-for="member in founders"
+                  :key="member.github"
+                >
+                  <a
+                    class="user valign-wrapper"
+                    :href="'https://github.com/'+member.github"
+                    target="_blank"
+                  >
+                    <img
+                      class="avatar"
+                      :src="'https://github.com/'+member.github+'.png'"
+                      :alt="member.name +'\'s Photo'"
+                    />
+
+                    <span class="username dotted-link">{{ member.name }}</span>
+                  </a>
+                </div>
+              </div>
+
+              <h4 class="light margined-bottom-comfortable">
                 <span class="underlined">Team</span>
               </h4>
 
@@ -525,25 +551,30 @@
             },
           ],
 
-          team: [
-            { name: 'Shivangi Shukla', github: 's-shivangi' },
+          founders: [
             { name: 'Krushn Dayshmookh', github: 'krushndayshmookh' },
+            { name: 'Tushar Joshi', github: 'tushar2179' },
+            { name: 'Sahil Kindarle', github: 'SahilKindarle' },
+          ],
+
+          team: [
+            { name: 'Kishor Baidya', github: 'kbaidya21' },
             { name: 'Shreyas Malewar', github: 'shreyasmalewar' },
             { name: 'Yash Kurzekar', github: 'yashkurzekar' },
             { name: 'Ankita Pimpalkar', github: 'Ankitapimpalkar12' },
+            { name: 'Tushar Deshwal', github: 'Tushar-Deshwal' },
           ],
 
           alumni: [
             { name: 'Vithika Jha', github: 'vithikaa' },
-            { name: 'Tushar Joshi', github: 'tushar2179' },
-            { name: 'Sahil Kindarle', github: 'SahilKindarle' },
-            { name: 'Sharvari Dhomne', github: 'sharvaridhomne' },
-            { name: 'Ankita Belani', github: 'ankitabelani' },
-            { name: 'Mrunal Singh Zire', github: 'mszire' },
-            { name: 'Aditi Sulke', github: 'aditisulke' },
             { name: 'Pratik Pithore', github: 'Pratik-sys' },
-            { name: 'Kaushal Agnihotri', github: 'kaushalagnihotri' },
+            { name: 'Mrunal Singh Zire', github: 'mszire' },
+            { name: 'Ankita Belani', github: 'ankitabelani' },
+            { name: 'Aditi Sulke', github: 'aditisulke' },
+            { name: 'Sharvari Dhomne', github: 'sharvaridhomne' },
             { name: 'Rushika Nalamwar', github: 'rushikanalamwar' },
+            { name: 'Kaushal Agnihotri', github: 'kaushalagnihotri' },
+            { name: 'Shivangi Shukla', github: 's-shivangi' },
           ],
         },
 
